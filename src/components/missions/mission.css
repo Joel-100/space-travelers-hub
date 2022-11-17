@@ -1,67 +1,108 @@
-.mission-container {
-  border: 10px rgb(222, 215, 215) solid;
-}
-
-.mission-header {
-  display: grid;
-  grid-template-columns: 1fr 3fr 1fr 1fr;
-  padding: 20px;
-  border-bottom: 4px rgb(220, 205, 205) solid;
-}
-
-.mission-container-wrap {
-  display: grid;
-  grid-template-columns: 1fr 3fr 1fr 1fr;
-  padding: 20px 0;
-  border-bottom: 4px rgb(220, 205, 205) solid;
-}
-
-.member {
-  background-color: gray;
-  border: none;
-  border-radius: 10px;
-  color: #fff;
-  font-weight: 700;
-}
-
-.member-join {
-  background-color: transparent;
-  border-radius: 10px;
-  font-weight: 500;
-}
-
-.a-member {
-  background-color: rgb(75, 203, 226);
-  border: none;
-  border-radius: 10px;
-  color: #fff;
-  font-weight: 700;
-}
-
-.member-leave {
-  color: rgb(241, 35, 35);
-  background-color: transparent;
-  padding: 20px;
-  border: 1px rgb(241, 35, 35) solid;
-  border-radius: 10px;
-  width: 90%;
-  font-weight: 500;
-  font-size: 16px;
+.missions {
+  margin-right: 2.5rem;
+  margin-left: 4rem;
 }
 
 table {
-  width: 100%;
-  margin: 3rem 0;
+  table-layout: fixed;
   border-collapse: collapse;
-}
-
-td,
-th {
-  border: 1px solid #ddd;
+  margin-top: 30px;
+  margin-bottom: 50px;
   text-align: left;
-  padding: 8px;
+  border: 2px solid #c0c0c0;
 }
 
-tbody tr td {
-  padding: 1rem;
+thead {
+  border-bottom: 3px solid #c0c0c0;
+  height: 10vh;
+}
+
+thead th {
+  padding: 10px;
+}
+
+thead th:first-child {
+  width: 8%;
+}
+
+thead th:nth-child(2) {
+  width: 59%;
+}
+
+thead th:nth-child(3) {
+  width: 16%;
+}
+
+thead th:nth-child(4) {
+  width: 17%;
+}
+
+.tableHeader {
+  font-size: 25px;
+  font-weight: 900;
+  padding: 10px;
+}
+
+tbody td {
+  padding: 10px;
+  border: 2px solid #c0c0c0;
+}
+
+tbody > :nth-child(odd) {
+  background-color: #dcdcdc;
+}
+
+.missionName {
+  font-weight: 900;
+  font-size: 20px;
+  vertical-align: top;
+  padding-top: 15px;
+}
+
+.btnRow {
+  text-align: center;
+}
+
+.activeButton {
+  font-family: "Quicksand", Arial, Helvetica, sans-serif;
+  background-color: transparent;
+  border: 3px solid #f00;
+  border-radius: 5px;
+  color: #f00;
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.inactiveButton {
+  font-family: "Quicksand", Arial, Helvetica, sans-serif;
+  border: 3px solid #404040;
+  border-radius: 5px;
+  color: #404040;
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.activeMember {
+  font-family: "Quicksand", Arial, Helvetica, sans-serif;
+  color: #fff;
+  background-color: #00bfff;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.inactiveMember {
+  font-family: "Quicksand", Arial, Helvetica, sans-serif;
+  color: #fff;
+  background-color: #696969;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 900;
+  text-transform: uppercase;
 }

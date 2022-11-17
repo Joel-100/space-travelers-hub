@@ -1,37 +1,51 @@
-import React from 'react';
-// import MissionHeader from './MissionHeader';
+import { React, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { FetchMissionsHandler, ToggleMission } from '../../redux/missions/mission';
 import './mission.css';
 
-function Mission() {
+const Mission = () => {
+  const dispatch = useDispatch();
+  const missions = useSelector((state) => state.missionsReducer);
+  useEffect(() => {
+    if (!missions.length) dispatch(FetchMissionsHandler());
+  }, []);
+  const HandleClick = (id) => dispatch(ToggleMission(id));
   return (
-    <div>
+    <div className="missions">
       <table>
-        <thead>
+        <thead className="tableHeader">
           <tr>
-            <th className="">Mission</th>
+            <th>Mission</th>
             <th>Description</th>
             <th>Status</th>
             <th> </th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Thaicom</td>
-            <td>
-              daofksdfsdfsdfsdlfksdlfdvnksdsdjfnsdkfklfskldfsdfsjvnjfvmdlfsfnjvcsfjskfsf
-              sdfjsdfsdfskncskdnfskldfklsdjfnlksf sdfknvjfknskmfs
-              sdfnsldflsdkfsdfslfnsdfsldnfv jisodfsdfsdklmcd
-              sdnfjfrsssdlfk skdnfjdscs skcnsjdnfglfssjnscslsm sdfknsjd
-              scsknncksnksdncksdvla.,mncsdn jksdcjksdc
-
-            </td>
-            <td><button type="button" className="member">NOT A MEMBER</button></td>
-            <td><button type="button" className="member-join"> Join Mission</button></td>
-          </tr>
+          {missions.map((el) => (
+            <tr key={el.mission_id}>
+              <td className="missionName">{el.mission_name}</td>
+              <td className="missionDescription">{el.description}</td>
+              <td className="btnRow">
+                <span className={el.active ? 'activeMember' : 'inactiveMember'}>
+                  {el.active ? 'Active Member' : 'Not A member'}
+                </span>
+              </td>
+              <td className="btnRow">
+                <button
+                  type="button"
+                  className={el.active ? 'activeButton' : 'inactiveButton'}
+                  onClick={() => HandleClick(el.mission_id)}
+                >
+                  {el.active ? 'Leave Mission' : 'Join Mission'}
+                </button>
+              </td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>
   );
-}
+};
 
 export default Mission;
