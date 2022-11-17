@@ -31,39 +31,6 @@ function Mission() {
         </tbody>
       </table>
     </div>
-    // <div className="mission-container">
-    //   <MissionHeader />
-    //   <div className="mission-container-wrap">
-    //     <div className="mission-name"><h3>Thaicom</h3></div>
-    //     <div>
-    //       daofksdfsdfsdfsdlfksdlfdvnksdsdjfnsdkfklfskldfsdfsjvnjfvmdlfsfnjvcsfjskfsf
-    //       sdfjsdfsdfskncskdnfskldfklsdjfnlksf sdfknvjfknskmfs
-    //       sdfnsldflsdkfsdfslfnsdfsldnfv jisodfsdfsdklmcd
-    //       sdnfjfrsssdlfk skdnfjdscs skcnsjdnfglfssjnscslsm sdfknsjd
-    //       scsknncksnksdncksdvla.,mncsdn jksdcjksdc
-    //     </div>
-    //     <div>
-    //       <button type="button" className="member">NOT A MEMBER</button>
-
-  //     </div>
-  //     <div><button type="button" className="member-join"> Join Mission</button></div>
-  //   </div>
-  //   <div className="mission-container-wrap">
-  //     <div><h3>Thaicom</h3></div>
-  //     <div>
-  //       daofksdfsdfsdfsdlfksdlfdvnksdsdjfnsdkfklfskldfsdfsjvnjfvmdlfsfnjvcsfjskfsf
-  //       sdfjsdfsdfskncskdnfskldfklsdjfnlksf sdfknvjfknskmfs
-  //       sdfnsldflsdkfsdfslfnsdfsldnfv jisodfsdfsdklmcd
-  //       sdnfjfrsssdlfk skdnfjdscs skcnsjdnfglfssjnscslsm sdfknsjd
-  //       scsknncksnksdncksdvla.,mncsdn jksdcjksdc
-  //     </div>
-  //     <div>
-  //       <button type="button" className="a-member">Active Member</button>
-
-  //     </div>
-  //     <div><button type="button" className="member-leave"> Leave Mission</button></div>
-  //   </div>
-  // </div>
   );
 }
 
