@@ -1,18 +1,25 @@
-import PropTypes from 'prop-types';
-import { useDispatch } from 'react-redux';
-import { fetchAllRockets } from '../redux/rockets/rockets';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchAllRockets } from '../redux/rocket/rockets';
+import images from '../../public/images/dev.jpeg';
 
-const Rockets = ({ rocket }) => {
+const Rocket = () => {
+  const rockets = useSelector((state) => state.rockets);
   const dispatch = useDispatch();
 
-  const handleDelete = () => {
-    dispatch(deleteARocket(rocket.item_id));
-  };
+  useEffect(() => {
+    dispatch(fetchAllRockets());
+  }, []);
 
   return (
-    <div>
-      <h1>All Rockets</h1>
-    </div>
+    <section className="">
+      <div className="">
+        <div className="falcon">
+          <img src={images} alt="" />
+        </div>
+
+      </div>
+    </section>
   );
 };
 

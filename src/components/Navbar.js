@@ -1,23 +1,42 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
-const Navbar = () => (
-  <>
-    <div className="nav-container flex">
-      <h1>Space Travelers' Hub</h1>
-      <ul className="list flex">
-        <Link className="link" to="/">
-          Rockets
-        </Link>
-        <Link className="link" to="/missions">
-          Missions
-        </Link>
-        <Link className="link" to="/profile">
-          My Profile
-        </Link>
-      </ul>
-      <FaUser className="icon" />
+function NavBar() {
+  return (
+    <div className="nav_header_container">
+      <h2 className="logo">Space Travelers Hub</h2>
+
+      <nav className="nav_items">
+        <ul className="nav-links">
+          <li>
+            <NavLink
+              to="/"
+              className={`nav_link ${(isActive) => (isActive ? 'active' : '')}`}
+              end
+            >
+              Rockets
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="missions"
+              className={`nav_link ${(isActive) => (isActive ? 'active' : '')}`}
+            >
+              Missions
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/profile"
+              className={`nav_link ${(isActive) => (isActive ? 'active' : '')}`}
+            >
+              My profile
+            </NavLink>
+          </li>
+        </ul>
+      </nav>
     </div>
-  </>
-);
+  );
+}
 
-export default Navbar;
+export default NavBar;

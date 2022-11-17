@@ -1,0 +1,25 @@
+.rocket-card {
+  border: 1px #000 solid;
+  display: flex;
+}
+
+.rocket-profile {
+  max-height: 200px;
+  max-width: 300px;
+}
+
+.rocket-profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.rocket-description {
+  padding-left: 20px;
+  text-align: left;
+}
+
+.btn {
+  background-color: rgb(70, 70, 210);
+  color: #fff;
+}
