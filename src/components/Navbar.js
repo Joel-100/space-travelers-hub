@@ -1,42 +1,37 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import logo from '../images/planet.png';
+import './navbar.css';
 
-function NavBar() {
+const NavBar = () => {
+  const Links = [
+    { name: 'Rockets', path: '/', id: '1' },
+    { name: 'Missions', path: '/mission', id: '2' },
+    { name: 'Profile', path: '/profile', id: '1' },
+  ];
+
   return (
-    <div className="nav_header_container">
-      <h2 className="logo">Space Travelers Hub</h2>
-
-      <nav className="nav_items">
-        <ul className="nav-links">
-          <li>
-            <NavLink
-              to="/"
-              className={`nav_link ${(isActive) => (isActive ? 'active' : '')}`}
-              end
-            >
-              Rockets
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="missions"
-              className={`nav_link ${(isActive) => (isActive ? 'active' : '')}`}
-            >
-              Missions
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/profile"
-              className={`nav_link ${(isActive) => (isActive ? 'active' : '')}`}
-            >
-              My profile
-            </NavLink>
-          </li>
+    <nav className="navbar">
+      <div className="logo">
+        <img className="logoImage" src={logo} alt="logo" />
+        <p> Space Travelers Hub </p>
+      </div>
+      <div>
+        <ul className="navLinks">
+          {Links.map((el) => (
+            <li className="navLink" key={el.id}>
+              <NavLink
+                to={el.path}
+                className={({ isActive }) => (isActive ? 'active' : 'deactive')}
+              >
+                {el.name}
+              </NavLink>
+            </li>
+          ))}
         </ul>
-      </nav>
-    </div>
+      </div>
+    </nav>
   );
-}
+};
 
 export default NavBar;
