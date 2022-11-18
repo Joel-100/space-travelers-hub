@@ -1,3 +1,4 @@
+/* eslint-disable import/extensions */
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Rocket from './pages/Rocket';
 import NavBar from './components/NavBar';
