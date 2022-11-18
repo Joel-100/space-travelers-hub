@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Rocket from './pages/Rocket';
-import NavBar from './components/NavBar.js';
+import NavBar from './components/NavBar';
 
 function App() {
   return (
