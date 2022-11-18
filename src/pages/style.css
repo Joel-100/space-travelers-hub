@@ -1,0 +1,53 @@
+.rocket-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.rocket-card {
+  border: 1px #000 solid;
+  display: flex;
+}
+
+.rocket-profile {
+  max-height: 200px;
+  max-width: 300px;
+}
+
+.rocket-profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.rocket-description {
+  padding-left: 20px;
+  text-align: left;
+}
+
+span.reserved-badge {
+  background-color: rgb(15, 187, 15);
+  padding: 0.1rem 0.5rem;
+  color: white;
+  margin-right: 1rem;
+  border-radius: 10px;
+}
+
+.btn {
+  background-color: rgb(70, 70, 210);
+  color: #fff;
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background-color: crimson;
+  border: none;
+  color: #fff;
+  padding: 0.4rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
